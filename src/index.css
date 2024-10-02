@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,body{
+    color: gray;
+    background-color: #000;
+    font-family: "Inter", sans-serif;
+}
+h1,h2,h3{
+    font-weight: 600;
+    color:white;
+}
