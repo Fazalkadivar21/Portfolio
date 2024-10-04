@@ -1,5 +1,5 @@
-import Content from "./contents";
-import Link from "./links";
+import Content from "./Contentsontents";
+import Link from "./Links";
 
 const links = {
   Github: "https://github.com/fazalkadivar21",
@@ -10,8 +10,8 @@ const links = {
 function App() {
   return (
     <>
-      <div className="lg:mx-96 | md:mx-28 | h-screen">
-        <div className="m-6 | text-3xl | text-center | font-extrabold | font">
+      <div className="lg:mx-96 | lg:px-36 | md:mx-28 | h-screen">
+        <div className="m-12 | text-3xl | text-center | font-extrabold | font">
           <h1>Fazal Kadivar</h1>
         </div>
         <Content />
