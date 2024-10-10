@@ -1,19 +1,29 @@
-import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faXTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-function Buttons({ data }) {
+const links = {
+  Github: "https://github.com/fazalkadivar21",
+  Twitter: "https://x.com/fazalkadivar21",
+  Linkedin: "https://linkedin.com/in/fazalkadivar",
+};
+
+function Buttons() {
   return (
-    <div className="px-7 | space-y-6">
-      <h2>Find me on</h2>
-      {Object.entries(data).map(([key, value]) => (
-        <ul className="px-6 | mb-1" key={key}>
-          <li className="flex | justify-between | items-center | w-3/6">
-            <span className="font-medium | text-gray-400">{key}</span>
-            <span>
-              <a href={value}>@{value.split("/").slice(-1)[0]}</a>
-            </span>
-          </li>
-        </ul>
-      ))}
+    <div className="px-7 space-y-6 pb-10 mb-10">
+      <h2 className="text-2xl">Find me on</h2>
+      <div className="flex space-x-4 ml-4 pl-4">
+        {Object.entries(links).map(([key, value]) => (
+          <a
+            href={value}
+            key={key}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-gray-600"
+          >
+            <FontAwesomeIcon icon={key === 'Github' ? faGithub : key === 'Twitter' ? faXTwitter : faLinkedin} size="2x" />
+          </a>
+        ))}
+      </div>
     </div>
   );
 }

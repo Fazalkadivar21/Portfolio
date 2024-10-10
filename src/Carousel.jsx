@@ -14,30 +14,14 @@ const Carousel = ({ slides }) => {
   };
 
   return (
-    <div className="carousel">
-      <button onClick={prevSlide} className="prev">❮</button>
+    <div className="carousel flex justify-between items-center">
+      <button onClick={prevSlide} className="prev p-2">❮</button>
       <div className="carousel-slide">
         <img src={slides[currentIndex]} alt={`Slide ${currentIndex}`} />
       </div>
-      <button onClick={nextSlide} className="next">❯</button>
+      <button onClick={nextSlide} className="next p-2">❯</button>
     </div>
   );
 };
 
 export default Carousel;
-
-{/*
-    for the links here the idea is to use {data.projectsData.description[index]} this as the link getter to current project like so 
-
-    we just need to pass an array and it will handle the rest
-    
-    just like this
-
-    <Carousel slides={slides} />
-
-    const App = () => {
-    const slides = [
-    'https://via.placeholder.com/600x300?text=Slide+1',
-    'https://via.placeholder.com/600x300?text=Slide+2',
-    'https://via.placeholder.com/600x300?text=Slide+3'
-  ];*/}
