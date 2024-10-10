@@ -1,5 +1,6 @@
 import Content from "./Contents";
 import Link from "./Links";
+import BuyMeACoffee from "./BuyMeACoffee";
 
 function App() {
   return (
@@ -10,6 +11,10 @@ function App() {
         </div>
         <Content />
         <Link />
+        <div className="flex items-start justify-start px-7">
+        <h2 className="text-2xl py-2 pr-3">Sponsor : </h2>
+        <BuyMeACoffee />
+        </div>
       </div>
     </>
   );
